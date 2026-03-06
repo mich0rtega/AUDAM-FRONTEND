@@ -1,0 +1,166 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #F5F5E6;
+}
+
+/* --- MITAD IZQUIERDA (FORMULARIO) --- */
+.login-left {
+  flex: 1; /* ✅ ocupa la mitad exacta */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.login-logo {
+  width: 140px;
+  margin-bottom: 15px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7B4B27;
+  margin: 0;
+}
+
+.login-subtitle {
+  color: #1D6B42;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* --- FORMULARIO --- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  margin-bottom: -8px;
+}
+
+.login-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #F5F5E6;
+  font-size: 14px;
+  transition: all 0.3s;
+  outline: none;
+  color: #000; /* ✅ texto en negro */
+}
+
+.login-form input::placeholder {
+  color: #333; /* ✅ placeholder visible */
+}
+
+.login-form input:focus {
+  background-color: white;
+  border: 1px solid #1D6B42;
+  color: #000; /* ✅ mantiene texto negro al escribir */
+}
+
+.login-btn {
+  background-color: #1D6B42;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #14502f;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #4A4A4A;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.forgot-password:hover {
+  color: #1D6B42;
+  text-decoration: underline;
+}
+
+/* --- MITAD DERECHA (IMAGEN DE FONDO) --- */
+.login-right {
+  flex: 1; /* ✅ también ocupa la mitad exacta */
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ se recorta proporcionalmente */
+  object-position: center; /* centrada */
+}
+
+/* --- RESPONSIVE (para móviles) --- */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-right {
+    display: none;
+  }
+
+  .login-left {
+    flex: none;
+    width: 100%;
+    height: 100vh;
+  }
+}
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+  color: black; /* texto negro */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  color: #4A4A4A;
+  transition: 0.3s;
+}
+
+.toggle-password:hover {
+  color: #1D6B42;
+}
+
