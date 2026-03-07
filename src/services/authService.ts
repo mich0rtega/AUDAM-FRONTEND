@@ -8,7 +8,7 @@ export const authService = {
     const loginRes = await api.post('/auth/login', credentials);
     const data = loginRes.data;
     if (data?.csrf?.token) {
-      setCsrfToken(data.csrf.token, data.csrf.headerName);
+      setCsrfToken(data.csrf.token);
     }
   },
 
@@ -38,7 +38,7 @@ export const authService = {
   refreshToken: async () => {
     const response = await api.post('/auth/refresh');
     if (response.data?.csrf?.token) {
-      setCsrfToken(response.data.csrf.token, response.data.csrf.headerName);
+      setCsrfToken(response.data.csrf.token);;
     }
     return response.data;
   },
