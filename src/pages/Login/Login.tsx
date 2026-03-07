@@ -42,7 +42,8 @@ export default function Login() {
     <div className="login-container">
       <div className="login-left">
         <div className="login-content">
-          <img src={troncoImg} alt="Logo" className="login-logo" />
+       
+          <img src={logoImg} alt="Logo AU DAM" className="login-logo" />
           <form onSubmit={handleSubmit} className="login-form">
             <label>Correo Electrónico</label>
             <input
@@ -69,12 +70,11 @@ export default function Login() {
             <button type="submit" className="login-btn" disabled={loading}>
               {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
             </button>
-            {/* "¿Olvidaste tu contraseña?" eliminado */}
           </form>
         </div>
       </div>
       <div className="login-right">
-        <img src={logoImg} alt="Background" className="login-bg" />
+        <img src={troncoImg} alt="Troncos" className="login-bg" />
       </div>
     </div>
   );
