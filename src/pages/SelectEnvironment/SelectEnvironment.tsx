@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { UserEnvironment } from '../../types';
 import './SelectEnvironment.css';
+import logoImg from '../../assets/logo.png';
 
 export default function SelectEnvironment() {
   const { environments, selectEnvironment } = useAuth();

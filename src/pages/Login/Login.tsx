@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Login.css';
+import logoImg from '../../assets/logo.png';
+import troncoImg from '../../assets/troncos.png';
 
 export default function Login() {
   const { login, selectEnvironment } = useAuth();
@@ -40,7 +42,7 @@ export default function Login() {
     <div className="login-container">
       <div className="login-left">
         <div className="login-content">
-          <img src="/src/assets/logo.png" alt="Logo" className="login-logo" />
+          <img src={troncoImg} alt="Logo" className="login-logo" />
           <form onSubmit={handleSubmit} className="login-form">
             <label>Correo Electrónico</label>
             <input
@@ -72,7 +74,7 @@ export default function Login() {
         </div>
       </div>
       <div className="login-right">
-        <img src="/src/assets/troncos.png" alt="Background" className="login-bg" />
+        <img src={logoImg} alt="Background" className="login-bg" />
       </div>
     </div>
   );
